@@ -33,7 +33,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The most notable challenge I faced while designing the tip calculator was implementing the settings page. I have created it and although it is non-functional at the moment, I do intend to fix it.
+
+Another challenge was that of UI design. I took some inspiration from the provided examples and went with the theme of dark and light shades of a color, starting off with pink. It looked extremely tacky and so I switched to blue.
 
 ## License
 
