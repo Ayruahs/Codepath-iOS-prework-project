@@ -17,6 +17,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.billTextField.becomeFirstResponder()
+        
+        let settings = SettingsViewController()
+        
+        self.tipSegmentedControl.selectedSegmentIndex = settings.defaults.integer(forKey: settings.defaultTip)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -33,7 +38,7 @@ class ViewController: UIViewController {
         let tipPercentages = [0.15, 0.20, 0.22]
         
         let bill = Double(billTextField.text!) ?? 0
-        let tip = bill * tipPercentages[tipSegmentedControl.selectedSegmentIndex]
+        let tip = bill * tipPercentages[self.tipSegmentedControl.selectedSegmentIndex]
         let total = bill + tip
         
         self.tip.text = String.init(format: "$%0.2f", tip)
